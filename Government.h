@@ -1,3 +1,8 @@
+/**
+ * @file Government.h
+ * @brief Declaration of the Government class acting as the facade.
+ */
+
 #ifndef GOVERNMENT_H
 #define GOVERNMENT_H
 
@@ -7,10 +12,7 @@
 
 class Node;
 
-/**
- * @file Government.h
- * @brief Declaration of the Government class acting as the facade.
- */
+
 
 /**
  * @class Government

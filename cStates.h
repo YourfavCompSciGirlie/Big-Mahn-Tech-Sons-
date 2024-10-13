@@ -1,13 +1,15 @@
-#ifndef CITIZENSTATE_H
-#define CITIZENSTATE_H
-
-#include <string>
-
 /**
  * @file cStates.h
  * @author u23539764
  * @brief Declaration of the CitizenState abstract class and its derived states.
  */
+
+#ifndef CITIZENSTATE_H
+#define CITIZENSTATE_H
+
+#include <string>
+
+
 
 class Citizen;
 

@@ -1,12 +1,14 @@
+/**
+ * @file ModeOfTrans.h
+ * @brief Declaration of the ModeOfTrans abstract class representing transport modes.
+ */
+
 #ifndef MODEOFTRANSPORT_H
 #define MODEOFTRANSPORT_H
 
 #include <string>
 
-/**
- * @file ModeOfTrans.h
- * @brief Declaration of the ModeOfTrans abstract class representing transport modes.
- */
+
 
 /**
  * @class ModeOfTrans

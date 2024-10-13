@@ -1,3 +1,9 @@
+/**
+ * @file Citizen.h
+ * @author u23539764_(add yours guys)
+ * @brief Declaration of the Citizen class representing a citizen in the simulation.
+ */
+
 #ifndef CITIZEN_H
 #define CITIZEN_H
 
@@ -8,11 +14,7 @@
 class Building;
 class RoadNetWork;
 
-/**
- * @file Citizen.h
- * @author u23539764_(add yours guys)
- * @brief Declaration of the Citizen class representing a citizen in the simulation.
- */
+
 
 /**
  * @class Citizen
@@ -29,6 +31,8 @@ private:
     CitizenState* state; /**< Current state of the citizen */
     int age; /**< Age of the citizen */
     double budget; /**< Budget of the citizen */
+    double health;/**<Health of the citizen */
+    double happiness; /**< Happiness of the citizen */
 
 public:
     /**
@@ -36,12 +40,14 @@ public:
      * 
      * @param nam Name of the citizen.
      * @param age Age of the citizen.
+     * @param health  Health of the citizen
+     *  @param happiness Happiness of the citizen
      * @param budget Initial budget of the citizen.
      * @param curr Pointer to the current state of the citizen.
      * @param mode Pointer to the current mode of transport.
      * @param location Pointer to the current building location.
      */
-    Citizen(const std::string& nam, int age, double budget, CitizenState* curr, ModeOfTrans* mode, Building* location);
+    Citizen(const std::string& nam, int age,int health ,double happiness , double budget, CitizenState* curr, ModeOfTrans* mode, Building* location);
 
     /**
      * @brief Destroys the Citizen object.
@@ -77,6 +83,52 @@ public:
      * @return false If there was insufficient budget.
      */
     bool Spend(double amount);
+
+
+    /**
+     * @brief Decreases the health of citizens by a certain percentage.
+     * @param percentage The percentage by which the health is decreased.
+     */
+    void decreaseHealth(double percentage);
+
+    /**
+     * @brief Increases the health of citizens by a certain percentage.
+     * @param percentage The percentage by which the health is increased.
+     */
+    void increaseHealth(double percentage);
+
+    /**
+     * @brief Lowers the satisfaction of citizens by a certain amount.
+     * @param amount The amount by which satisfaction decreases.
+     */
+    void decreaseSatisfaction(double amount);
+
+    /**
+     * @brief Increases the satisfaction of citizens by a certain amount.
+     * @param amount The amount by which satisfaction increases.
+     */
+    void increaseSatisfaction(double amount);
+
+    /**
+     * @brief Simulates the evacuation of citizens during a natural disaster or emergency.
+     */
+    void evacuate();
+
+    /**
+     * @brief Simulates the return of citizens to the city after an event.
+     */
+    void returnToCity();
+
+    /**
+     * @brief Simulates citizens becoming unemployed during an economic recession.
+     */
+    void becomeUnemployed();
+
+    /**
+     * @brief Simulates citizens finding new jobs after a recession or job creation event.
+     */
+    void getNewJob();
+
 
     /**
      * @brief Gets the name of the citizen's current state.

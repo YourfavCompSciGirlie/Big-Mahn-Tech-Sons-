@@ -1,3 +1,8 @@
+/**
+ * @file RoadNetwork.h
+ * @brief Declaration of the RoadNetwork class representing the road network graph.
+ */
+
 #ifndef ROADNETWORK_H
 #define ROADNETWORK_H
 
@@ -8,10 +13,7 @@ class Edge;
 class Building;
 class Citizen;
 
-/**
- * @file RoadNetwork.h
- * @brief Declaration of the RoadNetwork class representing the road network graph.
- */
+
 
 /**
  * @class RoadNetwork

@@ -1,12 +1,14 @@
-#ifndef EDGE_H
-#define EDGE_H
-
-#include "Node.h"
 
 /**
  * @file Edge.h
  * @brief Declaration of the Edge class representing a road connecting two nodes.
  */
+
+#ifndef EDGE_H
+#define EDGE_H
+
+#include "Node.h"
+
 
 /**
  * @class Edge

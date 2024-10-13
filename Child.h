@@ -1,13 +1,15 @@
+/**
+ * @file ChildState.h
+ * @brief Declaration of the ChildState class.
+ */
+
 #ifndef CHILDSTATE_H
 #define CHILDSTATE_H
 
 #include <string>
 #include "cStates.h"
 
-/**
- * @file ChildState.h
- * @brief Declaration of the ChildState class.
- */
+
 
 /**
  * @class ChildState

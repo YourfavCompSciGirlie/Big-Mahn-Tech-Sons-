@@ -1,13 +1,15 @@
+/**
+ * @file DepartmentOfTransportation.h
+ * @brief Declaration of the DepartmentOfTransportation class.
+ */
+
+
 #ifndef DEPARTMENTOFTRANSPORTATION_H
 #define DEPARTMENTOFTRANSPORTATION_H
 
 #include <string>
 #include "RoadNetWork.h"
 
-/**
- * @file DepartmentOfTransportation.h
- * @brief Declaration of the DepartmentOfTransportation class.
- */
 
 class Citizen;
 
@@ -56,6 +58,28 @@ public:
      * @param problemDescription Description of the problem to fix.
      */
     void fixProblem(const std::string& problemDescription);
+
+
+   //------------------------EventCommand functions----------------------------------
+     /**
+     * @brief Blocks roads during a natural disaster.
+     */
+    void blockRoads();
+
+    /**
+     * @brief Clears roads after a disaster is over.
+     */
+    void clearRoads();
+
+    /**
+     * @brief Increases traffic during a city-wide event (e.g., a festival).
+     */
+    void increaseTraffic();
+
+    /**
+     * @brief Reduces traffic flow during events like pandemics or loadshedding.
+     */
+    void reduceTraffic();
 };
 
 #endif 

@@ -1,12 +1,14 @@
+/**
+ * @file Train.h
+ * @brief Declaration of the Train class.
+ */
+
 #ifndef TRAIN_H
 #define TRAIN_H
 
 #include "ModeOfTrans.h"
 
-/**
- * @file Train.h
- * @brief Declaration of the Train class.
- */
+
 
 /**
  * @class Train

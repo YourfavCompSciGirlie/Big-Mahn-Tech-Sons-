@@ -1,12 +1,14 @@
+/**
+ * @file AirTrans.h
+ * @brief Declaration of the AirTrans class.
+ */
+
 #ifndef AIRTRANS_H
 #define AIRTRANS_H
 
 #include "ModeOfTrans.h"
 
-/**
- * @file AirTrans.h
- * @brief Declaration of the AirTrans class.
- */
+
 
 /**
  * @class AirTrans
