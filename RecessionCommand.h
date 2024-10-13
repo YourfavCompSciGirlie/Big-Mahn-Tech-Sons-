@@ -12,7 +12,7 @@
  * @class RecessionCommand
  * @brief Concrete command class for handling economic recession effects in the city.
  */
-class RecessionCommand : public EventsCommand {
+class RecessionCommand : public EventsCommand{
 public:
     /**
      * @brief Raises taxes during the recession.
