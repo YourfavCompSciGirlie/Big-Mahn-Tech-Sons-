@@ -1,3 +1,7 @@
+/** 
+ * * @author u21824241_(add yours guys)
+ */
+
 #ifndef ELEMENT_H
 #define ELEMENT_H
 

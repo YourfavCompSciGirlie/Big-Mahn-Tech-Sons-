@@ -34,3 +34,9 @@ This project implements several key design patterns to meet its functional requi
 - **Data/**: Includes any required data files needed to run the program.
 - **Report/**: Contains the final project report in PDF format, as well as a Google Docs link to the latest version.
 - **Doxygen/**: Auto-generated documentation for classes and methods using Doxygen.
+
+## GUI Research Ideas
+- **Initial software idea 1**: https://www.gtkmm.org (further research required), or making use of a normal 
+GUI might be needed. 
+- **Initial software idea 2**: making use of a GUI website that makes use C++ code as an API.
+- - **Initial software idea 3**: making use of a game engine, that makes use of C++ code as a base.

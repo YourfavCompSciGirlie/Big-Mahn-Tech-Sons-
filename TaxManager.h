@@ -1,3 +1,7 @@
+/** 
+ * * @author u21824241_(add yours guys)
+ */
+
 #ifndef TAXMANAGER_H
 #define TAXMANAGER_H
 
