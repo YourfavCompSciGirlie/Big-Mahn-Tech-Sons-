@@ -55,7 +55,7 @@ public:
         if (!path.empty())
         {
             /** @bug transport strategy invoker needs to be checked*/ 
-            transportStrategy->move(citizen, path); 
+            transportStrategy->execute(citizen, path); 
             citizen->setCurrentPosition(destinationNode); // Update position after successful move
         }
         else

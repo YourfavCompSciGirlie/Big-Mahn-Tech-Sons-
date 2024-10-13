@@ -7,8 +7,10 @@
 #define MODEOFTRANSPORT_H
 
 #include <string>
-
-
+#include <vector>
+class Citizen;
+class Node;
+using namespace std;
 
 /**
  * @class ModeOfTrans
@@ -42,7 +44,7 @@ public:
      * 
      * @return void
      */
-    virtual void execute() const = 0;
+    virtual void execute(Citizen* citizen, vector<Node*> node ) const = 0;
 };
 
 #endif 
