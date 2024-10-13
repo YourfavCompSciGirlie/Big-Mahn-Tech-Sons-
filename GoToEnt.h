@@ -6,6 +6,9 @@
 #include "RoadNetWork.h"
 #include "Node.h"
 
+#include <iostream>
+using namespace std;
+
 /**
  * @class  GoToEnt
  * @brief   This class is a concrete command that allows a citizen to travel from the current position to a random entertainment node
@@ -17,10 +20,10 @@ class GoToEnt : public GoToCommand
    private:
       Citizen* citizen;
       Node* destination;
-      RoadNetWork* roadNetwork;
+      RoadNetwork* roadNetwork;
 
    public:
-      GoToEnt(Citizen* citizen, RoadNetWork* roadNetwork);
+      GoToEnt(Citizen* citizen, RoadNetwork* roadNetwork);
 };
 
 
