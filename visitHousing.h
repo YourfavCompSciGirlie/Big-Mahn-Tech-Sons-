@@ -1,3 +1,7 @@
+/** 
+ * * @author u21824241_(add yours guys)
+ */
+
 #ifndef VISITHOUSING_H
 #define VISITHOUSING_H
 

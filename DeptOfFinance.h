@@ -1,3 +1,6 @@
+/** 
+ * * @author u21824241_(add yours guys)
+ */
 #ifndef DEPTOFFINANCE_H
 #define DEPTOFFINANCE_H
 
