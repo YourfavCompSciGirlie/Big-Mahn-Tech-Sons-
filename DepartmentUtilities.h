@@ -1,3 +1,8 @@
+/**
+ * @file DepartmentUtilities.h
+ * @brief Header file for the DepartmentUtilities class that manages city utility departments like power, water, and waste management.
+ */
+
 #ifndef DEPARTMENTUTILITIES_H
 #define DEPARTMENTUTILITIES_H
 
@@ -42,9 +47,9 @@ public:
      */
     void trackUsage();
 
-    //+++++++++++++++++========== FOR THE COMMAND +++++++++++++++++++++++++++++++
+    //+++++++++++++++++========== FOR THE EVENT COMMAND +++++++++++++++++++++++++++++++
 
-        /**
+    /**
      * @brief Initiates power load shedding for the department.
      */
     void initiateLoadshedding();
