@@ -7,6 +7,7 @@
 #define RESOURCE_H
 
 #include <string>
+#include "TaxManager.h"
 
 /**
  * @class Resource
@@ -14,7 +15,7 @@
  *
  * This class provides a base for different types of resources used in the simulation.
  */
-class Resource {
+class Resource: public TaxManager {
 protected:
     std::string name; ///< The name of the resource.
     double amount; ///< The amount of the resource available.
@@ -67,6 +68,9 @@ public:
      * This method should be overridden by derived classes to provide specific information.
      */
     virtual void reportStatus() const = 0;
+
+    void visitBudget(Budget* budget) = 0;
+
 };
 
 #endif // RESOURCE_H

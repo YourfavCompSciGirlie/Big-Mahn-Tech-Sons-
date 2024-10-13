@@ -7,6 +7,7 @@
 #define RESIDENTIALBUILDING_H
 
 #include "Building.h"
+#include "TaxManager.h"
 
 /**
  * @class ResidentialBuilding
@@ -20,6 +21,12 @@ public:
      * @brief Reports the resource usage for residential buildings.
      */
     void reportResourceUsage() const override;
+    
+    /**
+     * @brief Accepts a visitor (TaxManager) to collect taxes from citizens.
+     * @param visitor The TaxManager visitor object.
+     */
+    void accept(TaxManager* visitor) override;
 };
 
 #endif // RESIDENTIALBUILDING_H

@@ -8,6 +8,8 @@
 
 #include <string>
 #include <vector>
+#include "Element.h"
+#include "TaxManager.h"
 
 class Node; ///< Forward declaration of Node class
 class Citizen; ///< Forward declaration of Citizen class
@@ -120,8 +122,12 @@ public:
     void decreaseResourceConsumption();
 
     // Note: The visit and accept methods are typically related to the Visitor design pattern.
-    virtual void visit(Building* building) = 0;
-    virtual void accept(class TaxManager visitor) = 0;
+    // virtual void visit(Building* building) = 0;
+    /**
+     * @brief Accepts a visitor (TaxManager).
+     * @param visitor The visitor object.
+     */
+    virtual void accept(TaxManager* visitor) = 0;
 };
 
 #endif // BUILDING_H
