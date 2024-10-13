@@ -43,6 +43,11 @@ public:
      * @brief Boosts economic relief programs to aid struggling citizens.
      */
     void boostEconomicReliefPrograms();
+
+    /**
+     * @brief starts/ends the command
+     */
+    void execute();
 };
 
 #endif // RECESSION_COMMAND_H
