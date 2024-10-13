@@ -5,6 +5,8 @@
 #include "Citizen.h"
 #include "RoadNetWork.h"
 #include "Node.h"
+#include <iostream>
+using namespace std;
 
 
 /**
@@ -20,6 +22,6 @@ class GoHome : public GoToCommand
       Node* destination;
       RoadNetWork* roadNetwork;
    public:
-      GoHome(Citizen* citizen, RoadNetWork* roadNetwork);
+      GoHome(Citizen* citizen, RoadNetwork* roadNetwork);
 }
 #endif

@@ -1,5 +1,6 @@
 /**
  * @file DepartmentUtilities.h
+ * @author Aundrea
  * @brief Header file for the DepartmentUtilities class that manages city utility departments like power, water, and waste management.
  */
 

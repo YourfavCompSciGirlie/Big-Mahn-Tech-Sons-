@@ -1,5 +1,6 @@
 /**
  * @file PowerSupply.h
+ * @author Aundrea
  * @brief Header file for the PowerSupply class, responsible for managing electricity generation and distribution in the city.
  */
 

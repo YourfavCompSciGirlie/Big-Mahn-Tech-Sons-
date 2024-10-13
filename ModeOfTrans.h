@@ -37,6 +37,12 @@ public:
      */
     virtual double getCost() const = 0;
 
+    /**
+     * @brief Executes the mean of the transport i.e)drives
+     * 
+     * @return void
+     */
+    virtual void execute() const = 0;
 };
 
 #endif 
