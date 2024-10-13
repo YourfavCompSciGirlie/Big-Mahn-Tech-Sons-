@@ -1,5 +1,6 @@
 /**
  * @file WaterSupply.h
+ * @author Aundrea
  * @brief Header file for the WaterSupply class, responsible for managing water distribution and supply in the city.
  */
 

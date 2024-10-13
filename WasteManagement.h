@@ -1,5 +1,6 @@
 /**
  * @file WasteManagement.h
+ * @author Aundrea
  * @brief Header file for the WasteManagement class, responsible for handling waste collection, disposal, and recycling in the city.
  */
 
