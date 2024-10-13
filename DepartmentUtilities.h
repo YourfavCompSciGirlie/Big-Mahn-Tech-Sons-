@@ -23,6 +23,28 @@ public:
     DepartmentUtilities(string name, double budget);
 
     /**
+     * @brief Displays the information about the department.
+     */
+    void displayDepartmentInfo();
+
+    /**
+     * @brief Requests additional budget allocation from the government.
+     */
+    void requestBudget();
+
+    /**
+     * @brief Allocates resources such as energy or water to different sectors of the city.
+     */
+    void allocateResources();
+
+    /**
+     * @brief Tracks the department's resource usage across various sectors or functions.
+     */
+    void trackUsage();
+
+    //+++++++++++++++++========== FOR THE COMMAND +++++++++++++++++++++++++++++++
+
+        /**
      * @brief Initiates power load shedding for the department.
      */
     void initiateLoadshedding();
@@ -46,26 +68,6 @@ public:
      * @brief Repairs infrastructure related to the department.
      */
     void repairInfrastructure();
-
-    /**
-     * @brief Displays the information about the department.
-     */
-    void displayDepartmentInfo();
-
-    /**
-     * @brief Requests additional budget allocation from the government.
-     */
-    void requestBudget();
-
-    /**
-     * @brief Allocates resources such as energy or water to different sectors of the city.
-     */
-    void allocateResources();
-
-    /**
-     * @brief Tracks the department's resource usage across various sectors or functions.
-     */
-    void trackUsage();
 };
 
 #endif // DEPARTMENTUTILITIES_H
