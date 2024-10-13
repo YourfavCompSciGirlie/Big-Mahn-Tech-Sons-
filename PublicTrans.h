@@ -28,6 +28,13 @@ public:
      * @return double The cost.
      */
     double getCost() const override;
+
+     /**
+     * @brief Executes the mean of transport
+     * 
+     * @return  void
+     */
+    void execute() const override;
 };
 
 #endif 
