@@ -1,13 +1,15 @@
+/**
+ * @file DepartmentOfTransportation.h
+ * @brief Declaration of the DepartmentOfTransportation class.
+ */
+
+
 #ifndef DEPARTMENTOFTRANSPORTATION_H
 #define DEPARTMENTOFTRANSPORTATION_H
 
 #include <string>
 #include "RoadNetWork.h"
 
-/**
- * @file DepartmentOfTransportation.h
- * @brief Declaration of the DepartmentOfTransportation class.
- */
 
 class Citizen;
 

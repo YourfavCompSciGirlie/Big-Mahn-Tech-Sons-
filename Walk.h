@@ -1,12 +1,14 @@
+/**
+ * @file Walk.h
+ * @brief Declaration of the Walk class.
+ */
+
 #ifndef WALK_H
 #define WALK_H
 
 #include "ModeOfTrans.h"
 
-/**
- * @file Walk.h
- * @brief Declaration of the Walk class.
- */
+
 
 /**
  * @class Walk

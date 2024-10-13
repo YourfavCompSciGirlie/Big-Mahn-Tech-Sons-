@@ -1,3 +1,8 @@
+/**
+ * @file Building.h
+ * @brief Declaration of the Building class.
+ */
+
 #ifndef BUILDING_H
 #define BUILDING_H
 
@@ -5,10 +10,7 @@
 
 class Node;
 
-/**
- * @file Building.h
- * @brief Declaration of the Building class.
- */
+
 
 /**
  * @class Building

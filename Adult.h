@@ -1,13 +1,15 @@
-#ifndef ADULTSTATE_H
-#define ADULTSTATE_H
-
-#include <string>
-#include "cStates.h"
 
 /**
  * @file AdultState.h
  * @brief Declaration of the AdultState class.
  */
+
+
+#ifndef ADULTSTATE_H
+#define ADULTSTATE_H
+
+#include <string>
+#include "cStates.h"
 
 /**
  * @class AdultState

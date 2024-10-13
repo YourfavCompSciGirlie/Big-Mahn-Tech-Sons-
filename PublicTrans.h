@@ -1,12 +1,13 @@
+/**
+ * @file PublicTrans.h
+ * @brief Declaration of the PublicTransportaion class.
+ */
 #ifndef PUBLICTRANS_H
 #define PUBLICTRANS_H
 
 #include "ModeOfTrans.h"
 
-/**
- * @file PublicTrans.h
- * @brief Declaration of the PublicTrans class.
- */
+
 
 /**
  * @class PublicTrans

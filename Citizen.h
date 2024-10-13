@@ -1,3 +1,9 @@
+/**
+ * @file Citizen.h
+ * @author u23539764_(add yours guys)
+ * @brief Declaration of the Citizen class representing a citizen in the simulation.
+ */
+
 #ifndef CITIZEN_H
 #define CITIZEN_H
 
@@ -8,11 +14,7 @@
 class Building;
 class RoadNetWork;
 
-/**
- * @file Citizen.h
- * @author u23539764_(add yours guys)
- * @brief Declaration of the Citizen class representing a citizen in the simulation.
- */
+
 
 /**
  * @class Citizen
@@ -126,10 +128,6 @@ public:
      * @brief Simulates citizens finding new jobs after a recession or job creation event.
      */
     void getNewJob();
-
-
-
-
 
 
     /**

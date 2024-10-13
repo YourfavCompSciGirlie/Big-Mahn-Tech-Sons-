@@ -1,3 +1,8 @@
+/**
+ * @file Node.h
+ * @brief Declaration of the Node class representing a node in the road network graph.
+ */
+
 #ifndef NODE_H
 #define NODE_H
 
@@ -7,10 +12,7 @@
 class Edge;
 class Building;
 
-/**
- * @file Node.h
- * @brief Declaration of the Node class representing a node in the road network graph.
- */
+
 
 /**
  * @class Node

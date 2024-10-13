@@ -1,13 +1,14 @@
+/**
+ * @file PensionerState.h
+ * @brief Declaration of the PensionerState class.
+ */
 #ifndef PENSIONERSTATE_H
 #define PENSIONERSTATE_H
 
 #include <string>
 #include "cStates.h"
 
-/**
- * @file PensionerState.h
- * @brief Declaration of the PensionerState class.
- */
+
 
 /**
  * @class PensionerState
