@@ -69,7 +69,7 @@ public:
      */
     virtual void reportStatus() const = 0;
 
-    void visitBudget(Budget* budget) = 0;
+    void visitBudget(Budget* budget);
 
 };
 
