@@ -36,7 +36,7 @@ This project implements several key design patterns to meet its functional requi
 - **Doxygen/**: Auto-generated documentation for classes and methods using Doxygen.
 
 ## GUI Research Ideas
-- **Initial software idea 1**: https://www.gtkmm.org (further research required), or making use of a normal 
+- **Initial software idea 1**: https://www.qt.io. Most promising GUI software that has capabilities to integrate C++ code with UI components.  
 GUI might be needed. 
 - **Initial software idea 2**: making use of a GUI website that makes use C++ code as an API.
 - - **Initial software idea 3**: making use of a game engine, that makes use of C++ code as a base.
