@@ -23,5 +23,5 @@ class GoHome : public GoToCommand
       RoadNetWork* roadNetwork;
    public:
       GoHome(Citizen* citizen, RoadNetwork* roadNetwork);
-}
+};
 #endif

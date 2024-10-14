@@ -26,15 +26,18 @@ private:
     std::string name; /**< Name of the node */
     std::vector<Edge*> edges; /**< Adjacent edges (roads) */
     Building* building; /**< Building located at this node, if any */
+    std::string  type;
 
 public:
     /**
      * @brief Constructs a new Node object.
      * 
+     * @param building Reference to building at that node
      * @param id Unique identifier for the node.
      * @param name Name of the node.
+     * @param type Type of node it is. (Residential, Commercial, School, Airport etc.)
      */
-    Node(int id, const std::string& name);
+    Node(Building* building, int id, const std::string& name, std::string type);
 
     /**
      * @brief Destroys the Node object.
