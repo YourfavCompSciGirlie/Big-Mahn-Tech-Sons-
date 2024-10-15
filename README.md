@@ -40,3 +40,20 @@ This project implements several key design patterns to meet its functional requi
 GUI might be needed. 
 - **Initial software idea 2**: making use of a GUI website that makes use C++ code as an API.
 - - **Initial software idea 3**: making use of a game engine, that makes use of C++ code as a base.
+
+
+
+## Information on the DepartmentUtilities
+**Design Pattern used : **Façade**
+-**Facade**: Government
+-**Subsystem** : DepartmentUtilities
+-**Subsystem** : PowerSupply
+-**Subsystem** : waterSupply
+-**Subsystem** : WasteManagement
+-The Government acts as the façade participant providing a unified interface to allow the user the control the system
+-Government can then interact with the subsystems seamlessly to manage resources, budget allocation and state actions like powercut.
+-the Department Utilities has inherited classes like waterSupply, powerSupply and WAsteManagement to represent specialized departments within the simulation
+-Each department provides services vital to the city's infrastructure: distributing electricity, managing water supply, handling waste, and maintaining infrastructure.
+-These subsystems altogether ensure that resources are allocated efficiently, infrastructure is maintained, and citizen needs are met to ensure citizen satisfaction
+-inheritance allows for shared behavior across utilities (e.g., budgeting, resource tracking) while allowing each department to customize its own specialized functionality (e.g., power generation for PowerSupply, waste collection for WasteManagement).
+-Provides scalability, as new utility systems can easily be added by extending DepartmentUtilities.
