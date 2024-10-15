@@ -38,6 +38,12 @@ This pattern allows flexible resource management by decoupling service requests 
 
 ### 2. Factory Method
 **Use Case:** Building Creation  
+**Participants:**
+- **Creator:** `BuildingCreator`
+- **ConcreteCreators:** `ResidentialBuildingCreator`, `CommercialBuildingCreator`, `IndustrialBuildingCreator`, `LandmarkBuildingCreator`
+- - **Product:** `Building`
+- **ConcreteProduct:** `House`, `Apartment`, `Estate`, `Shop`, `Office`, `Mall`,`School`, `Hospital`, `Warehouse`, `Factory`, `Airport`, `TrainStation`, `Park`, `Monument`, `Museum`
+- - **Client:** `HousingDept`
 
 **How it Works:**  
 The Factory Method provides an interface for creating objects (buildings) without specifying the exact class of object being created. Different types of buildings (e.g., `ResidentialBuilding`, `CommercialBuilding`) are constructed through a factory.
