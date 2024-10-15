@@ -43,6 +43,11 @@ public:
      * @brief Assesses the economic impact of the festival on the city.
      */
     void assessEconomicImpactOfFestival();
+
+       /**
+     * @brief starts/ends the command
+     */
+    void execute();
 };
 
 #endif // FESTIVAL_COMMAND_H

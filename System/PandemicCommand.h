@@ -43,6 +43,11 @@ public:
      * @brief Tracks the infection rates of the pandemic.
      */
     void trackInfectionRates();
+
+       /**
+     * @brief starts/ends the command
+     */
+    void execute();
 };
 
 #endif // PANDEMIC_COMMAND_H

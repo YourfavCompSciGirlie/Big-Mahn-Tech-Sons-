@@ -38,6 +38,11 @@ public:
      * @brief Manages complaints related to utility outages.
      */
     void manageUtilityComplaints();
+
+       /**
+     * @brief starts/ends the command
+     */
+    void execute();
 };
 
 #endif // LOADSHEDDING_COMMAND_H

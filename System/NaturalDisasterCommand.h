@@ -43,6 +43,11 @@ public:
      * @brief Manages the aftermath and reconstruction efforts.
      */
     void manageAftermathReconstruction();
+
+       /**
+     * @brief starts/ends the command
+     */
+    void execute();
 };
 
 #endif // NATURAL_DISASTER_COMMAND_H
