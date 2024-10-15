@@ -8,12 +8,13 @@
 
 #include <string>
 #include <vector>
+#include "Edge.h"
 
 class Edge;
 class Building;
 
 
-
+ 
 /**
  * @class Node
  * @brief Represents a node (e.g., intersection) in the road network graph.
@@ -82,6 +83,7 @@ public:
      * @param building Pointer to the building to set.
      */
     void setBuilding(Building* building);
+    Edge* getEdgeTo(Node* destination) const;
 };
 
 #endif

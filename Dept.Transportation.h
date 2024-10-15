@@ -3,13 +3,12 @@
  * @brief Declaration of the DepartmentOfTransportation class.
  */
 
-
 #ifndef DEPARTMENTOFTRANSPORTATION_H
 #define DEPARTMENTOFTRANSPORTATION_H
-
+ 
 #include <string>
 #include "RoadNetWork.h"
-
+#include "BuildingIterator.h"
 
 class Citizen;
 
@@ -80,6 +79,11 @@ public:
      * @brief Reduces traffic flow during events like pandemics or loadshedding.
      */
     void reduceTraffic();
+
+    /**
+     * @brief This function is to get building iterator
+     */
+    BuildingIterator getBuildingIterator() const;
 };
 
 #endif 

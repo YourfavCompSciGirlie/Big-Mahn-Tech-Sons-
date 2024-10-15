@@ -11,7 +11,7 @@
 class Citizen;
 class Node;
 using namespace std;
-
+ 
 /**
  * @class ModeOfTrans
  * @brief Abstract base class for different modes of transport.
@@ -45,6 +45,8 @@ public:
      * @return void
      */
     virtual void execute(Citizen* citizen, vector<Node*> node ) const = 0;
+    // New static method for selecting mode based on distance
+    static ModeOfTrans* selectModeByDistance(double distance);
 };
 
 #endif 

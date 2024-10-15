@@ -7,13 +7,15 @@
 #define ROADNETWORK_H
 
 #include <vector>
+#include <string>
+#include "BuildingIterator.h"
 
 class Node;
 class Edge;
 class Building;
 class Citizen;
 
-
+ 
 
 /**
  * @class RoadNetwork
@@ -121,6 +123,8 @@ public:
      * @return std::vector<Node*> Vector of nodes representing the shortest path.
      */
     std::vector<Node*> findShortestPath(const RoadNetwork* network, Node* start, Node* end);
+    BuildingIterator createBuildingIterator() const;
+    Building* findBuildingByName(const std::string& name) const;
 };
 
 #endif 
