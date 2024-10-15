@@ -154,7 +154,13 @@ This pattern adds flexibility by allowing dynamic switching between transportati
 
 ### 10. Iterator
 **Use Case:** Traversing the City Graph  
-
+**Participants:**
+- **Client:** `DepartmentOfTransportation`
+- **Iterator:** `BuildingIterator `
+- **Concrete Iterator:** `BuildingIterator `
+- **Aggregate:** `RoadNetwork`
+- **Concrete Aggregate:** `RoadNetwork`
+  
 **How it Works:**  
 The city is modeled as a graph of buildings connected by roads. The Iterator pattern enables traversal through this graph.
 
