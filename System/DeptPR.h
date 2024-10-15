@@ -92,13 +92,19 @@ public:
      */
     void notifyHousingToBuild();
 
+
+    /**
+     * @brief if building waste is at a certain level, remove it
+     */
+    void notifyHousingToRemove(Building* building);
+
     /**
      * @brief Notifies the Utilities Department to address issues or prepare for increased demand.
      * 
      * This could involve actions like increasing power supply, fixing water supply issues, or improving waste management.
      * The PR Department mediates by sending this notification on behalf of observed buildings or citizens.
      * @note  work on @class Resources to be added
-     */
+     *      */
     void notifyUtilities();
 
     /**
