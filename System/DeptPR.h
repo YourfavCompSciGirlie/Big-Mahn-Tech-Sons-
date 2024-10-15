@@ -1,3 +1,6 @@
+#ifndef DEPTPR_H
+#define DEPTPR_H
+
 #include <vector>
 #include <iostream>
 
