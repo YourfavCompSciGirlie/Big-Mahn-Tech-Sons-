@@ -38,7 +38,7 @@ public:
     void execute()
     {
         /** @bug Citizen must keep track of its current position .*/
-        Node *startNode = citizen->getCurrentPosition(); 
+        Node *startNode = citizen->getCurrentLocation(); 
 
         // Check if already at the destination
         if (startNode == destinationNode)
@@ -56,7 +56,7 @@ public:
         {
             /** @bug transport strategy invoker needs to be checked*/ 
             transportStrategy->execute(citizen, path); 
-            citizen->setCurrentPosition(destinationNode); // Update position after successful move
+            citizen->setCurrentLocation(destinationNode); // Update position after successful move
         }
         else
         {

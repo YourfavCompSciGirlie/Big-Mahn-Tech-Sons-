@@ -10,6 +10,7 @@
 #include <string>
 #include "ModeOfTrans.h"
 #include "cStates.h"
+#include "GoToCommand.h"
 
 class Building;
 class RoadNetWork;
@@ -27,12 +28,16 @@ class Citizen {
 private:
     std::string name; /**< Name of the citizen */
     ModeOfTrans* modeOfTransport; /**< Current mode of transport */
-    Building* currentLocation; /**< Current building location */
+    Node* currentLocation; /**< Current building location */
+    Node* workLocation; /**<Citizen's work location */
+    Node* homeLocation; /**<Citizen's home location */
+    GoToCommand* go;
     CitizenState* state; /**< Current state of the citizen */
     int age; /**< Age of the citizen */
+    int ageThreshhold = 0; /*Maximum age the citizen will get before death*/
     double budget; /**< Budget of the citizen */
     double health;/**<Health of the citizen */
-    double happiness; /**< Happiness of the citizen */
+    double satisfaction; /**< Happiness of the citizen */
 
 public:
     /**
@@ -41,19 +46,32 @@ public:
      * @param nam Name of the citizen.
      * @param age Age of the citizen.
      * @param health  Health of the citizen
-     *  @param happiness Happiness of the citizen
-     * @param budget Initial budget of the citizen.
-     * @param curr Pointer to the current state of the citizen.
      * @param mode Pointer to the current mode of transport.
      * @param location Pointer to the current building location.
+     *  @param work Pointer to the work location.
+     * @param home Pointer to home location
+     * 
+     * @note Randomize the intial budget 
+     * @note Intialize the citizen state to ChildState
+     * @note age starts at 1
+     * @note initialize health to 100
+     * @note intilize statifaction level at 50
      */
-    Citizen(const std::string& nam, int age,int health ,double happiness , double budget, CitizenState* curr, ModeOfTrans* mode, Building* location);
+    Citizen(const std::string& nam,double happiness , Node* location, Node* work, Node* home);
 
     /**
      * @brief Destroys the Citizen object.
      */
     ~Citizen(); 
 
+    /**
+     * @brief Citizen gets older by one year
+     * 
+     * As the the citizen gets older & and in the pensioner state, calculate the new threshold and if citizen reaches threashold then die.
+     */
+    void getOlder();
+
+    int getAge();
     /**
      * @brief Gets the name of the citizen.
      * 
@@ -170,21 +188,23 @@ public:
      * 
      * @return Building* Pointer to the current building.
      */
-    Building* getCurrentLocation() const;
+    Node* getCurrentLocation() const;
 
     /**
      * @brief Sets the citizen's current building location.
      * 
      * @param location Pointer to the new building.
      */
-    void setCurrentLocation(Building* location);
+    void setCurrentLocation(Node* location);
 
     /**
      * @brief Travels to another building.
      * 
      * @param destination Pointer to the destination building.
+     * 
+     * If @param destination is (work, home, school etc) execute the relevant command
      */
-    void travelTo(Building* destination);
+    void travelTo(Node* destination);
 
     /**
      * @brief Travels to another building using a specific strategy.
