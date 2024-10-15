@@ -13,8 +13,6 @@
 class Edge;
 class Building;
 
-
- 
 /**
  * @class Node
  * @brief Represents a node (e.g., intersection) in the road network graph.
@@ -81,11 +79,16 @@ public:
     Building* getBuilding() const;
 
     /**
-     * @brief Sets the building located at this node.
-     * 
-     * @param building Pointer to the building to set.
+     * @brief Sets the building at this node.
+     * @param building Pointer to the building.
      */
     void setBuilding(Building* building);
+
+    /**
+     * @brief Finds the edge that connects this node to a destination node.
+     * @param destination Pointer to the destination node.
+     * @return Pointer to the edge if found, or nullptr otherwise.
+     */
     Edge* getEdgeTo(Node* destination) const;
 };
 

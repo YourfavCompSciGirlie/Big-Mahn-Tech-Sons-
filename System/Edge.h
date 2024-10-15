@@ -9,7 +9,6 @@
 
 #include "Node.h"
 
-
 /**
  * @class Edge
  * @brief Represents an edge (road) in the road network graph.
@@ -59,7 +58,10 @@ public:
     double getDistance() const;
     double getTrafficFactor() const;
     void setTrafficFactor(double factor);
-    // Considers both distance and traffic
+    /**
+     * @brief Calculates the travel time considering both distance and traffic.
+     * @return Travel time.
+     */
     double getTravelTime() const;
 };
 

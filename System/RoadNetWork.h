@@ -115,15 +115,25 @@ public:
     std::vector<Node*> findPath(Node* start, Node* end) const;
 
     /**
-     * @brief Finds the shortest path between two nodes using a pathfinding algorithm.
-     * 
+     * @brief Finds the shortest path between two nodes.
      * @param network Pointer to the road network.
-     * @param start Pointer to the start node.
-     * @param end Pointer to the end node.
-     * @return std::vector<Node*> Vector of nodes representing the shortest path.
+     * @param start Pointer to the starting node.
+     * @param end Pointer to the ending node.
+     * @return Vector of nodes representing the shortest path.
      */
     std::vector<Node*> findShortestPath(const RoadNetwork* network, Node* start, Node* end);
+
+    /**
+     * @brief Creates an iterator for the buildings in the road network.
+     * @return BuildingIterator for the buildings.
+     */
     BuildingIterator createBuildingIterator() const;
+
+    /**
+     * @brief Finds a building by its name.
+     * @param name Name of the building.
+     * @return Pointer to the building if found, or nullptr otherwise.
+     */
     Building* findBuildingByName(const std::string& name) const;
 };
 

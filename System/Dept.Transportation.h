@@ -81,7 +81,8 @@ public:
     void reduceTraffic();
 
     /**
-     * @brief This function is to get building iterator
+     * @brief Gets an iterator for traversing buildings in the road network.
+     * @return BuildingIterator object for building traversal.
      */
     BuildingIterator getBuildingIterator() const;
 };
