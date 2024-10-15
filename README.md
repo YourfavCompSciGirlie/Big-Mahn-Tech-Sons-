@@ -44,16 +44,15 @@ GUI might be needed.
 
 
 ## Information on the DepartmentUtilities
-**Design Pattern used : **Façade**
--**Facade**: Government
--**Subsystem** : DepartmentUtilities
--**Subsystem** : PowerSupply
--**Subsystem** : waterSupply
--**Subsystem** : WasteManagement
--The Government acts as the façade participant providing a unified interface to allow the user the control the system
--Government can then interact with the subsystems seamlessly to manage resources, budget allocation and state actions like powercut.
--the Department Utilities has inherited classes like waterSupply, powerSupply and WAsteManagement to represent specialized departments within the simulation
+**Design Pattern used : **Chain of responsibility**
+-**Handler** : DepartmentUtilities
+-**ConcreteHandler1** : PowerSupply
+-**ConcreteHandler2** : waterSupply
+-**ConcreteHandler3** : WasteManagement
+
+-A request for resource usage or infrastructure repair might be initiated by the          government
+-the Department Utilities has inherited classes like waterSupply, powerSupply and WAsteManagement to represent concreteHandlers within the simulation
 -Each department provides services vital to the city's infrastructure: distributing electricity, managing water supply, handling waste, and maintaining infrastructure.
--These subsystems altogether ensure that resources are allocated efficiently, infrastructure is maintained, and citizen needs are met to ensure citizen satisfaction
--inheritance allows for shared behavior across utilities (e.g., budgeting, resource tracking) while allowing each department to customize its own specialized functionality (e.g., power generation for PowerSupply, waste collection for WasteManagement).
--Provides scalability, as new utility systems can easily be added by extending DepartmentUtilities.
+-These concrete handlers altogether ensure that resources are allocated efficiently, infrastructure is maintained, and citizen needs are met to ensure citizen satisfaction
+when a request has been made DepartmentUtilities (the base handler), which delegates it to one of its specific departments (PowerSupply, WaterSupply, WasteManagement) which takes care of it.
+Chain of responsibility is good for scalability: As the city grows, more utility departments can be added to the chain without changing the structure of existing departments. When a request has been initiated,  the utility systems can dynamically determine the best handler.
