@@ -1,7 +1,14 @@
 /**
  * @file DepartmentUtilities.h
  * @author Aundrea
- * @brief Header file for the DepartmentUtilities class that manages city utility departments like power, water, and waste management.
+ * @brief Header file for the DepartmentUtilities class that manages city utility 
+ * departments like power, water, and waste management.
+ * 
+ * Design Pattern used : Chain of responsibility
+ * Handler : DepartmentUtilities
+ * ConcreteHandler1 : PowerSupply
+ * ConcreteHandler2 : waterSupply
+ * ConcreteHandler3 : WasteManagement
  * 
  *  * Colleague: in the Mediator design pattern with @file DeptPR.h
  */
@@ -22,6 +29,7 @@ private:
     string departmentName; /**< Name of the department (e.g., Power, Water, Waste Management). */
     double resourceUsage;  /**< The amount of resources used by the department. */
     double budget;         /**< The budget allocated to the department. */
+    DepartmentUtilities* successor;
     DepartmentOfPR* PR; /**<Access to the mediator */
 public:
     /**
@@ -56,6 +64,13 @@ public:
      * @brief Tracks the department's resource usage across various sectors or functions.
      */
     void trackUsage();
+
+    /**
+     * @brief the handleRequest() function is the core method responsible for either processing 
+     *          the request or passing it along the chain to the next handler. It is in the
+     *          inherited classes
+     */
+    virtual void handleRequest() = 0;
 
     //+++++++++++++++++========== FOR THE EVENT COMMAND +++++++++++++++++++++++++++++++
 

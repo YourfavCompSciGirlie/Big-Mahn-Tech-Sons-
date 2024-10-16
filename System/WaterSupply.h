@@ -2,6 +2,12 @@
  * @file WaterSupply.h
  * @author Aundrea
  * @brief Header file for the WaterSupply class, responsible for managing water distribution and supply in the city.
+ *  
+ *  Design Pattern used : Chain of responsibility
+ *  Handler : DepartmentUtilities
+ *  ConcreteHandler1 : PowerSupply
+ *  ConcreteHandler2 : waterSupply
+ *  ConcreteHandler3 : WasteManagement
  */
 
 #ifndef WATERSUPPLY_H
@@ -63,6 +69,14 @@ public:
      * @return The current water capacity available.
      */
     double getWaterCapacity();
+
+    /**
+     * @brief the handleRequest() function is the core method responsible for either processing 
+     *          the request or passing it along the chain to the next handler. WaterSupply 
+     *          checks if it can handle the request, if not, WaterSupply will pass it on
+     *          to the next concreteHandler.
+     */
+    void handleRequest();
 };
 
 #endif  // WATERSUPPLY_H

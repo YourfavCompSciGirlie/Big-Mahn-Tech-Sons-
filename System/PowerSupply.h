@@ -2,6 +2,12 @@
  * @file PowerSupply.h
  * @author Aundrea
  * @brief Header file for the PowerSupply class, responsible for managing electricity generation and distribution in the city.
+ *  
+ *  Design Pattern used : Chain of responsibility
+ *  Handler : DepartmentUtilities
+ *  ConcreteHandler1 : PowerSupply
+ *  ConcreteHandler2 : waterSupply
+ *  ConcreteHandler3 : WasteManagement
  */
 
 #ifndef POWERSUPPLY_H
@@ -63,6 +69,14 @@ public:
      * @return The current power generation capacity available.
      */
     double getPowerCapacity();
+
+    /**
+     * @brief the handleRequest() function is the core method responsible for either processing 
+     *          the request or passing it along the chain to the next handler. PowerSupply 
+     *          checks if it can handle the request, if not, PowerSupply will pass it on
+     *          to the next concreteHandler.
+     */
+    void handleRequest();
 };
 
 #endif  // POWERSUPPLY_H
