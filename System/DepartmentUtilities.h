@@ -89,6 +89,7 @@ public:
      * @brief Repairs infrastructure related to the department.
      */
     void repairInfrastructure();
+
 };
 
 #endif // DEPARTMENTUTILITIES_H

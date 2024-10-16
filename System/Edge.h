@@ -3,12 +3,11 @@
  * @file Edge.h
  * @brief Declaration of the Edge class representing a road connecting two nodes.
  */
-
+ 
 #ifndef EDGE_H
 #define EDGE_H
 
 #include "Node.h"
-
 
 /**
  * @class Edge
@@ -57,6 +56,13 @@ public:
      * @return double The distance in kilometers.
      */
     double getDistance() const;
+    double getTrafficFactor() const;
+    void setTrafficFactor(double factor);
+    /**
+     * @brief Calculates the travel time considering both distance and traffic.
+     * @return Travel time.
+     */
+    double getTravelTime() const;
 };
 
 #endif 

@@ -28,6 +28,9 @@ class GoToWork : public GoToCommand
       RoadNetwork* roadNetwork;
 
    public:
+      /**
+       * @brief   Constructor for the GoToWork class to simulate work and add income to the citizen at the end
+       */
       GoToWork(Citizen* citizen, RoadNetwork* roadNetwork);
 };
 
