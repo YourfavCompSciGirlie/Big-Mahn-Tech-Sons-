@@ -1,3 +1,12 @@
+/**
+ * @file GoToCommand.h
+ * 
+ * Command Interface: GoToCommand
+ * Concrete Command: GoToEnt GoToWork GoHome GoToHos GoToSchool
+ * 
+ * 
+ */
+
 #ifndef GOTOCOMMAND_H
 #define GOTOCOMMAND_H
 

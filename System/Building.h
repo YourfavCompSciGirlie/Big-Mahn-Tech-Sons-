@@ -1,6 +1,8 @@
 /**
  * @file Building.h
  * @brief Declaration of the Building class.
+ * 
+ *  SUBJECT: Part of the observer design pattern as is observed by the Department of PR @file DeptPR.h
  */
 
 #ifndef BUILDING_H
@@ -10,6 +12,7 @@
 #include <vector>
 #include "Element.h"
 #include "TaxManager.h"
+#include "DeptPR.h"
 
 class Node; ///< Forward declaration of Node class
 class Citizen; ///< Forward declaration of Citizen class
@@ -22,6 +25,7 @@ class Citizen; ///< Forward declaration of Citizen class
  */
 class Building {
 private:
+    DepartmentOfPR* PR;
     std::string name; ///< The name of the building.
     int capacity; ///< Maximum capacity of the building.
     std::vector<Citizen*> tenants; ///< Tenants residing in the building.
@@ -35,7 +39,7 @@ public:
      * @param capacity Maximum number of tenants the building can accommodate.
      * @param location Pointer to the node where the building is located.
      */
-    Building(const std::string& name, int capacity, Node* location);
+    Building(const std::string& name, int capacity, Node* location, DepartmentOfPR* PR);
 
     /**
      * @brief Destroys the Building object.
@@ -48,6 +52,11 @@ public:
      * @return std::string The building's name.
      */
     std::string getName() const;
+
+    /**
+     * @brief part of the observer design pattern: notify the PR department if there is a change in state
+     */
+    void notifyPR();
 
     /**
      * @brief Gets the capacity of the building.

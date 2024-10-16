@@ -1,3 +1,10 @@
+/**
+ * @file DeptPR.h
+ * 
+ * 
+ * Observor: is the 
+ */
+
 #include <vector>
 #include <iostream>
 
@@ -26,8 +33,6 @@ class FinanceDept;
 class DepartmentOfPR
 {
 private:
-    vector<Building *> observedBuildings;  ///< List of buildings being monitored by PR.
-    vector<Citizen *> observedCitizens;    ///< List of citizens being monitored by PR.
     HousingDept *housing;                  ///< Reference to the Housing Department.
     DepartmentUtilities *utilities;        ///< Reference to the Utilities Department.
     FinanceDept *finance;                  ///< Reference to the Finance Department.
@@ -41,20 +46,6 @@ public:
      * @param financeDept Pointer to the Finance Department.
      */
     DepartmentOfPR(HousingDept *housingDept, DepartmentUtilities *utilitiesDept, FinanceDept *financeDept);
-
-    /**
-     * @brief Adds a building to the list of observed buildings.
-     * 
-     * @param building Pointer to the building to be added.
-     */
-    void addBuilding(Building *building);
-
-    /**
-     * @brief Adds a citizen to the list of observed citizens.
-     * 
-     * @param citizen Pointer to the citizen to be added.
-     */
-    void addCitizen(Citizen *citizen);
 
     /**
      * @brief Updates the state by checking both buildings and citizens.

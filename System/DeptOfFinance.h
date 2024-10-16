@@ -1,5 +1,7 @@
 /** 
  * * @author u21824241_(add yours guys)
+ * 
+ *  * Colleague: in the Mediator design pattern with @file DeptPR.h
  */
 #ifndef DEPTOFFINANCE_H
 #define DEPTOFFINANCE_H
@@ -7,7 +9,7 @@
 #include <vector>
 #include "Element.h"
 #include "TaxManager.h"
-
+#include "DeptPR.h"
 /**
  * @class DeptOfFinance
  * @brief Client class that interacts with different tax policies.
@@ -15,6 +17,7 @@
 class DeptOfFinance {
 private:
     std::vector<Element*> elements; /**< List of elements in the city */
+        DepartmentOfPR* PR; /**<Access to the mediator */
 
 public:
     DeptOfFinance();
@@ -61,6 +64,12 @@ public:
      * @brief Assesses the economic impact of an event on the city's finances.
      */
     void assessEconomicImpact();
+
+    /**
+     * @brief Function to ask the department of PR to ask the other departments for something (i.e money from finance dept)
+     */
+    void requestPR();
+
 };
 
 #endif // DEPTOFFINANCE_H

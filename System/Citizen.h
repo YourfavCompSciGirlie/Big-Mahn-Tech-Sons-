@@ -2,6 +2,9 @@
  * @file Citizen.h
  * @author u23539764_(add yours guys)
  * @brief Declaration of the Citizen class representing a citizen in the simulation.
+ * 
+ * INVOKER:  This class invokes the @file GoToCommand.h commands
+ * SUBJECT: Part of the observer design pattern as is observed by the Department of PR @file DeptPR.h
  */
 
 #ifndef CITIZEN_H
@@ -11,6 +14,7 @@
 #include "ModeOfTrans.h"
 #include "cStates.h"
 #include "GoToCommand.h"
+#include "DeptPR.h"
 
 class Building;
 class RoadNetWork;
@@ -31,6 +35,7 @@ private:
     Node* currentLocation; /**< Current building location */
     Node* workLocation; /**<Citizen's work location */
     Node* homeLocation; /**<Citizen's home location */
+    DepartmentOfPR*  PR; /**<Reference to government's PPR */
     GoToCommand* go;
     CitizenState* state; /**< Current state of the citizen */
     int age; /**< Age of the citizen */
@@ -57,7 +62,7 @@ public:
      * @note initialize health to 100
      * @note intilize statifaction level at 50
      */
-    Citizen(const std::string& nam,double happiness , Node* location, Node* work, Node* home);
+    Citizen(const std::string& nam,double happiness , Node* location, Node* work, Node* home, DepartmentOfPR* PR);
 
     /**
      * @brief Destroys the Citizen object.
@@ -70,6 +75,11 @@ public:
      * As the the citizen gets older & and in the pensioner state, calculate the new threshold and if citizen reaches threashold then die.
      */
     void getOlder();
+
+   /**
+     * @brief part of the observer design pattern: notify the PR department if there is a change in state
+     */
+    void notifyPR();
 
     int getAge();
     /**

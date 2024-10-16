@@ -2,12 +2,15 @@
  * @file DepartmentUtilities.h
  * @author Aundrea
  * @brief Header file for the DepartmentUtilities class that manages city utility departments like power, water, and waste management.
+ * 
+ *  * Colleague: in the Mediator design pattern with @file DeptPR.h
  */
 
 #ifndef DEPARTMENTUTILITIES_H
 #define DEPARTMENTUTILITIES_H
 
 #include <iostream>
+#include "DeptPR.h"
 using namespace std;
 
 /**
@@ -19,7 +22,7 @@ private:
     string departmentName; /**< Name of the department (e.g., Power, Water, Waste Management). */
     double resourceUsage;  /**< The amount of resources used by the department. */
     double budget;         /**< The budget allocated to the department. */
-
+    DepartmentOfPR* PR; /**<Access to the mediator */
 public:
     /**
      * @brief Constructor for DepartmentUtilities.
@@ -37,6 +40,12 @@ public:
      * @brief Requests additional budget allocation from the government.
      */
     void requestBudget();
+
+
+    /**
+     * @brief Function to ask the department of PR to ask the other departments for something (i.e money from finance dept)
+     */
+    void requestPR();
 
     /**
      * @brief Allocates resources such as energy or water to different sectors of the city.

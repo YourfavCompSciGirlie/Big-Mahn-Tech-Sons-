@@ -14,6 +14,7 @@
 #include "CommercialBuilding.h"
 #include "ResidentialBuilding.h"
 #include "Budget.h"
+#include "RoadNetWork.h"
 
 /**
  * @class TaxManager
@@ -31,7 +32,7 @@ private:
     std::vector<CommercialBuilding*> commercialBuildings; /**< List of commercial buildings for business tax calculation. */
     std::vector<ResidentialBuilding*> residentialBuildings; /**< List of residential buildings for citizen tax collection. */
     float governmentBudget;                  /**< City budget after tax collection. */
-
+    RoadNetWork*  roadNetwork; /**Link to the city/network as to be able to traverse and collect all taxes in every building */
 public:
     /**
      * @brief Constructor for TaxManager.
@@ -61,6 +62,7 @@ public:
     
     /**
      * @brief Collects taxes from all citizens and businesses in the city.
+     * @see RoadNetWork.h as it will need to go to the city network first, traverse all nodes and collect
      */
     void collectTaxes();
     

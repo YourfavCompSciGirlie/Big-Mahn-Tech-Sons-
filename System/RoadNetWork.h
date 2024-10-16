@@ -124,6 +124,15 @@ public:
     std::vector<Node*> findShortestPath(const RoadNetwork* network, Node* start, Node* end);
 
     /**
+     * @brief Gos through the whole graph, thus visiting all buildings.
+     * This will be called by the taxmananger to collect taxes using the visitor design pattern
+     * 
+     * 
+     * @todo Needs proper thinking
+     */
+    std::vector<Node*> traverseWholeGraph();
+
+    /**
      * @brief Creates an iterator for the buildings in the road network.
      * @return BuildingIterator for the buildings.
      */

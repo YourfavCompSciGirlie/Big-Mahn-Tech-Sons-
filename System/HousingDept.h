@@ -1,6 +1,8 @@
 /**
  * @file HousingDept.h
  * @brief Declaration of the HousingDept class.
+ * 
+ * Colleague: in the Mediator design pattern with @file DeptPR.h
  */
 
 #ifndef HOUSINGDEPT_H
@@ -10,6 +12,8 @@
 #include <vector>
 #include "Building.h" // Include the Building class
 #include "Resource.h" // Include resource classes
+#include "BuildingCreator.h"
+#include "DeptPR.h"
 
 /**
  * @class HousingDept
@@ -19,6 +23,8 @@ class HousingDept {
 private:
     std::vector<Building*> buildings; ///< List of buildings managed by the housing department.
     Resource* resources; ///< Pointer to the resources available for building management.
+    BuildingCreator* buildingCreator; ///< Pointer to building factory 
+    DepartmentOfPR* PR; /**<Access to the mediator */
 
 public:
     /**
@@ -51,6 +57,11 @@ public:
      * @brief Reports the status of all buildings managed by the department.
      */
     void reportBuildingStatus() const;
+
+    /**
+     * @brief Function to ask the department of PR to ask the other departments for something (i.e money from finance dept)
+     */
+    void requestPR();
 
     /**
      * @brief Monitors housing statistics (e.g., occupancy, capacity).
