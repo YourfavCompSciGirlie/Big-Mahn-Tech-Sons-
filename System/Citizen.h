@@ -144,6 +144,8 @@ public:
 
     /**
      * @brief Simulates the return of citizens to the city after an event.
+     * 
+     * huh
      */
     void returnToCity();
 
@@ -156,6 +158,9 @@ public:
      * @brief Simulates citizens finding new jobs after a recession or job creation event.
      */
     void getNewJob();
+
+
+    void setThreshhold(int age);
 
 
     /**
@@ -177,7 +182,7 @@ public:
      * 
      * @param age The new age of the citizen.
      */
-    void updateState(int age);
+    void updateState();
 
     /**
      * @brief Gets the current mode of transport.

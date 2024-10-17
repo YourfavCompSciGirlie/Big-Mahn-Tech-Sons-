@@ -17,7 +17,7 @@
 class DeptOfFinance {
 private:
     std::vector<Element*> elements; /**< List of elements in the city */
-        DepartmentOfPR* PR; /**<Access to the mediator */
+    DepartmentOfPR* PR; /**<Access to the mediator */
 
 public:
     DeptOfFinance();

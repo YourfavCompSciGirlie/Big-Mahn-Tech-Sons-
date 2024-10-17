@@ -51,12 +51,12 @@ public:
      * 
      * @return std::string The building's name.
      */
-    std::string getName() const;
+   virtual std::string getName() const = 0;
 
     /**
      * @brief part of the observer design pattern: notify the PR department if there is a change in state
      */
-    void notifyPR();
+    virtual void notifyPR();
 
     /**
      * @brief Gets the capacity of the building.

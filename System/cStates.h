@@ -8,7 +8,7 @@
 #define CITIZENSTATE_H
 
 #include <string>
-
+#include "Citizen.h"
 
 
 class Citizen;
@@ -20,12 +20,14 @@ class Citizen;
  * Defines the interface for different states of a citizen (e.g., Child, Adult, Pensioner).
  */
 class CitizenState {
+    protected:
 public:
     /**
      * @brief Virtual destructor.
      */
     virtual ~CitizenState() {}
 
+    virtual void handle(Citizen* citizen) = 0;
     /**
      * @brief Gets the name of the state.
      * 

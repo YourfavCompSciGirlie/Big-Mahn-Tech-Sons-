@@ -38,7 +38,7 @@ class DepartmentOfPR
 private:
     HousingDept *housing;                  ///< Reference to the Housing Department.
     DepartmentUtilities *utilities;        ///< Reference to the Utilities Department.
-    FinanceDept *finance;                  ///< Reference to the Finance Department.
+    DeptOfFinance *finance;                  ///< Reference to the Finance Department.
 
 public:
     /**
@@ -48,7 +48,7 @@ public:
      * @param utilitiesDept Pointer to the Utilities Department.
      * @param financeDept Pointer to the Finance Department.
      */
-    DepartmentOfPR(HousingDept *housingDept, DepartmentUtilities *utilitiesDept, FinanceDept *financeDept);
+    DepartmentOfPR(HousingDept *housingDept, DepartmentUtilities *utilitiesDept, DeptOfFinance *financeDept);
 
     /**
      * @brief Updates the state by checking both buildings and citizens.
@@ -57,8 +57,8 @@ public:
      * and ensure everything is functioning as expected. If any issues are detected,
      * appropriate actions are taken by notifying other departments.
      */
-    void update(); // call check buildings and citizens
-
+    void update(Building* building); // call check buildings and citizens
+    void update(Citizen* citizen);
     /**
      * @brief Checks the state of all observed buildings.
      * 

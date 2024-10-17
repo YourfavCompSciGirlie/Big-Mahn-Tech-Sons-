@@ -19,6 +19,7 @@
  */
 class AdultState : public CitizenState {
 public:
+    void handle(Citizen* citizen) override;
     /**
      * @brief Gets the name of the state.
      * 
